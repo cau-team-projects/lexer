@@ -15,6 +15,7 @@ def lex(infile):
                 # if state is final state and unable to proceed
                 elif state in tokens:
                     print('token', tokens[state])
+                    state = 0
                     continue
                 # if state is not final state and unable to proceed
                 else: 

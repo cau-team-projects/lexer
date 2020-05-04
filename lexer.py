@@ -8,10 +8,11 @@ def lex(infile):
         for char in line:
             while True:
                 print('char', char)
-                print('state', state)
+                print('cur state', state)
                 # if able to proceed
                 if char in table[state]: 
                     state = table[state][char]
+                    print('next state', state)
                 # if state is final state and unable to proceed
                 elif state in tokens:
                     print('token', tokens[state])

@@ -7,6 +7,7 @@ tokens = {
     6: 'id',
     7: 'id',
     8: 'id',
+    9: 'NEQ',
     10: 'id',
     12: 'L_INT',
     13: 'L_INT',
@@ -68,5 +69,4 @@ tokens = {
     70: 'FALSE',
     72: 'SEMI',
     73: 'COMMA',
-    75: 'NEQ'
 }

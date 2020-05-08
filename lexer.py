@@ -16,8 +16,9 @@ class Lexer:
             for char in line:
                 self.charbuf.append(char)
                 while True:
-                    print('char', char)
+                    print('-' * 10)
                     print('cur state', self.state)
+                    print('new char', char)
                     # if able to proceed
                     if char in self.table[self.state]: 
                         self.state = self.table[self.state][char]

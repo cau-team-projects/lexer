@@ -16,7 +16,8 @@ class Lexer:
         linenum = 0
         for line in infile:
             linenum += 1
-            self.tokenval = []
+            if self.debug:
+                print('line', linenum)
             for char in line:
                 self.tokenval.append(char)
                 while True:

@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import sys
 import lexer.table
 import lexer.tokens
@@ -47,5 +48,6 @@ class Lexer:
             return False
 
 with open(sys.argv[1], 'r') as infile:
+    sys.stdout = open(sys.argv[1] + '.out', 'w')
     lexer = Lexer()
     lexer.lex(infile)

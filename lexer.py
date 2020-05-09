@@ -7,18 +7,18 @@ class Lexer:
     def __init__(self, debug=False):
         self.debug = debug
         self.state = 0
-        self.charbuf = []
+        self.tokenval = []
         self.table = lexer.table.table
         self.tokens = lexer.tokens.tokens
     def prtoken(self):
-        print('<%s, %s>' % (self.tokens[self.state], ''.join(self.charbuf[:-1])))
+        print('<%s, %s>' % (self.tokens[self.state], ''.join(self.tokenval[:-1])))
     def lex(self, infile):
         linenum = 0
         for line in infile:
             linenum += 1
-            self.charbuf = []
+            self.tokenval = []
             for char in line:
-                self.charbuf.append(char)
+                self.tokenval.append(char)
                 while True:
                     if self.debug:
                         print('-' * 10)
@@ -33,7 +33,7 @@ class Lexer:
                     elif self.state in self.tokens:
                         self.prtoken()
                         self.state = 0
-                        self.charbuf = self.charbuf[-1:]
+                        self.tokenval = self.tokenval[-1:]
                         continue
                     # if state is not final state and unable to proceed
                     else: 

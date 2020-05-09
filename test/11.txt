@@ -8,21 +8,21 @@ bool b = true;
 bool b2 = false;
 if (1 == 1) {
   if (f == f2) {
-    print("f equal to f2")
+    print("f equal to f2");
   } else if (b) {
-    print("b is true")
+    print("b is true");
   } else
-    print("else")
+    print("else");
   if (f3 > 0)
-    print("f3 greater than 0")
+    print("f3 greater than 0");
   if (f3 != 0)
-    print("f3 not equal to 0")
+    print("f3 not equal to 0");
   if (f3 < 0)
-    print("f3 less than 0")
+    print("f3 less than 0");
   if (f3 >= 0)
-    print("f3 greater than or equal to 0")
+    print("f3 greater than or equal to 0");
   if (f3 <= 0)
-    print("f3 less than or equal to 0")
+    print("f3 less than or equal to 0");
   i = i << 10;
   i = i >> 1;
   i = i & 1;
@@ -30,7 +30,7 @@ if (1 == 1) {
   i = i * 42;
   i = i / 4;
   while (true)
-    myfn(1, 2, 3)
+    myfn(1, 2, 3);
   for (; false; ) ;
 }
 return 10;
